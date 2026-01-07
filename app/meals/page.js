@@ -4,6 +4,12 @@ import classes from "./page.module.css";
 import { getMeals } from "@/libs/meals";
 import { Suspense } from "react";
 
+export const metadata = {
+  title: "All meals",
+  description:
+    "Browse a collection of delicious meals shared by our community.",
+};
+
 async function Meals() {
   const meals = await getMeals();
   return <MealsGrid meals={meals} />;
